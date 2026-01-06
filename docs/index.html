@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMF爆発察知ツール</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .score-display {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .score-value {
+            font-size: 5em;
+            font-weight: bold;
+            margin: 20px 0;
+            line-height: 1;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            margin: 20px 0;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .category-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .category-card h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .category-score {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .detail-value {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .signals-section {
+            background: #fff8e1;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #ffa726;
+        }
+        
+        .signals-section h3 {
+            color: #e65100;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .signal-item {
+            padding: 10px 0;
+            color: #333;
+            font-size: 1em;
+        }
+        
+        .signal-item::before {
+            content: "📍 ";
+        }
+        
+        .boost-alert {
+            background: #ffebee;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #ef5350;
+        }
+        
+        .boost-alert h3 {
+            color: #c62828;
+            margin-bottom: 10px;
+        }
+        
+        .boost-item {
+            color: #d32f2f;
+            font-weight: bold;
+            padding: 5px 0;
+        }
+        
+        .boost-item::before {
+            content: "⚡ ";
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+        
+        .legend-emoji {
+            font-size: 1.5em;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .score-value {
+                font-size: 3.5em;
+            }
+            
+            .status-badge {
+                font-size: 1.2em;
+                padding: 12px 24px;
+            }
+            
+            .main-card {
+                padding: 20px;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💥 TMF爆発察知ツール</h1>
+            <p>20年超米国債レバレッジETF 環境認識ダッシュボード</p>
+        </div>
+        
+        <div class="main-card">
+            <div id="loading" class="loading">
+                <p>データを読み込んでいます...</p>
+            </div>
+            
+            <div id="error" class="error" style="display: none;">
+                <p>データの読み込みに失敗しました。</p>
+            </div>
+            
+            <div id="dashboard" style="display: none;">
+                <div class="score-display">
+                    <div style="color: #666; font-size: 1.2em;">TMFスコア</div>
+                    <div id="score-value" class="score-value">--</div>
+                    <div id="status-badge" class="status-badge">--</div>
+                    <div id="last-updated" class="last-updated">最終更新: --</div>
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-emoji">🟢</span>
+                        <span>通常 (0-39)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-emoji">⚠️</span>
+                        <span>前兆 (40-64)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-emoji">🚨</span>
+                        <span>警戒 (65-79)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-emoji">💥</span>
+                        <span>直前 (80-100)</span>
+                    </div>
+                </div>
+                
+                <div id="boost-section"></div>
+                
+                <div class="signals-section">
+                    <h3>📊 主なシグナル要因</h3>
+                    <div id="signals-list"></div>
+                </div>
+                
+                <div class="category-grid">
+                    <div class="category-card">
+                        <h3>📈 金利系スコア</h3>
+                        <div id="interest-score" class="category-score">--</div>
+                        <div id="interest-details"></div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <h3>⚡ リスクオフスコア</h3>
+                        <div id="risk-score" class="category-score">--</div>
+                        <div id="risk-details"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>このツールは環境認識専用です。売買判断は行いません。</p>
+            <p>データ更新: 毎日JST 7:00頃（GitHub Actions経由）</p>
+        </div>
+    </div>
+    
+    <script>
+        // データ読み込み
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) throw new Error('データ取得失敗');
+                
+                const data = await response.json();
+                renderDashboard(data);
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+            } catch (error) {
+                console.error('データ読み込みエラー:', error);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+        
+        // ダッシュボード描画
+        function renderDashboard(data) {
+            // スコアとステータス
+            document.getElementById('score-value').textContent = data.score.toFixed(1);
+            document.getElementById('score-value').style.color = data.status.color;
+            
+            const statusBadge = document.getElementById('status-badge');
+            statusBadge.textContent = `${data.status.emoji} ${data.status.label}`;
+            statusBadge.style.backgroundColor = data.status.color;
+            
+            // 最終更新
+            const updated = new Date(data.last_updated);
+            document.getElementById('last-updated').textContent = 
+                `最終更新: ${updated.toLocaleString('ja-JP')}`;
+            
+            // ブースト条件
+            if (data.boost_conditions.boost_applied) {
+                const boostHtml = `
+                    <div class="boost-alert">
+                        <h3>⚡ 補助条件発動中</h3>
+                        ${data.boost_conditions.conditions.map(c => 
+                            `<div class="boost-item">${c}</div>`
+                        ).join('')}
+                    </div>
+                `;
+                document.getElementById('boost-section').innerHTML = boostHtml;
+            }
+            
+            // シグナル
+            const signalsHtml = data.signals.map(s => 
+                `<div class="signal-item">${s}</div>`
+            ).join('');
+            document.getElementById('signals-list').innerHTML = signalsHtml;
+            
+            // カテゴリスコア
+            const interest = data.category_scores.interest_rate;
+            const risk = data.category_scores.risk_off;
+            
+            document.getElementById('interest-score').textContent = 
+                interest.total.toFixed(1);
+            
+            document.getElementById('risk-score').textContent = 
+                risk.total.toFixed(1);
+            
+            // 詳細情報
+            renderInterestDetails(interest.details);
+            renderRiskDetails(risk.details);
+        }
+        
+        // 金利系詳細
+        function renderInterestDetails(details) {
+            let html = '';
+            
+            if (details.treasury_10y && details.treasury_10y.value !== null) {
+                html += `
+                    <div class="detail-item">
+                        <span class="detail-label">10年債利回り</span>
+                        <span class="detail-value">${details.treasury_10y.value}%</span>
+                    </div>
+                `;
+            }
+            
+            if (details.treasury_30y && details.treasury_30y.value !== null) {
+                html += `
+                    <div class="detail-item">
+                        <span class="detail-label">30年債利回り</span>
+                        <span class="detail-value">${details.treasury_30y.value}%</span>
+                    </div>
+                `;
+            }
+            
+            if (details.rate_decline && details.rate_decline.value !== null) {
+                const change = details.rate_decline.value;
+                const arrow = change > 0 ? '📈' : '📉';
+                html += `
+                    <div class="detail-item">
+                        <span class="detail-label">2週間変化率</span>
+                        <span class="detail-value">${arrow} ${change.toFixed(2)}%</span>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('interest-details').innerHTML = html;
+        }
+        
+        // リスクオフ詳細
+        function renderRiskDetails(details) {
+            let html = '';
+            
+            if (details.vix && details.vix.value !== null) {
+                html += `
+                    <div class="detail-item">
+                        <span class="detail-label">VIX指数</span>
+                        <span class="detail-value">${details.vix.value.toFixed(2)}</span>
+                    </div>
+                `;
+            }
+            
+            if (details.sp500_deviation && details.sp500_deviation.value !== null) {
+                const dev = details.sp500_deviation.value;
+                const arrow = dev > 0 ? '📈' : '📉';
+                html += `
+                    <div class="detail-item">
+                        <span class="detail-label">S&P500</span>
+                        <span class="detail-value">${details.sp500_deviation.price}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">200日MA乖離</span>
+                        <span class="detail-value">${arrow} ${dev.toFixed(2)}%</span>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('risk-details').innerHTML = html;
+        }
+        
+        // ページ読み込み時に実行
+        loadData();
+        
+        // 5分ごとに自動更新
+        setInterval(loadData, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

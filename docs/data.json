@@ -1,0 +1,69 @@
+{
+  "last_updated": "2026-01-06T15:03:36.545521",
+  "date": "2026-01-06",
+  "score": 19.4,
+  "status": {
+    "level": "normal",
+    "label": "通常",
+    "emoji": "🟢",
+    "color": "#10b981"
+  },
+  "category_scores": {
+    "interest_rate": {
+      "total": 30.2,
+      "details": {
+        "treasury_10y": {
+          "value": 4.19,
+          "score": 45.2
+        },
+        "treasury_30y": {
+          "value": 4.86,
+          "score": 41.0
+        },
+        "rate_decline": {
+          "value": 0.72,
+          "score": 0
+        }
+      }
+    },
+    "risk_off": {
+      "total": 12.2,
+      "details": {
+        "vix": {
+          "value": 14.9,
+          "score": 24.5
+        },
+        "sp500_deviation": {
+          "value": 9.9,
+          "price": 6929.41,
+          "ma_200": 6305.14,
+          "score": 0
+        }
+      }
+    }
+  },
+  "boost_conditions": {
+    "boost_applied": false,
+    "boost_multiplier": 1.0,
+    "conditions": []
+  },
+  "signals": [
+    "目立った変化なし"
+  ],
+  "raw_data": {
+    "treasury_10y": 4.19,
+    "treasury_30y": 4.86,
+    "vix": 14.9,
+    "sp500": {
+      "price": 6929.41,
+      "ma_200": 6305.14,
+      "deviation_pct": 9.9
+    },
+    "treasury_10y_change": {
+      "current": 4.19,
+      "past": 4.16,
+      "change_pct": 0.72,
+      "weeks": 2
+    }
+  }
+}
