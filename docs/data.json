@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-01-07T01:53:32.627011",
+  "last_updated": "2026-01-07T02:14:57.662619",
   "date": "2026-01-07",
-  "score": 19.5,
+  "score": 13.7,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -10,15 +10,15 @@
   },
   "category_scores": {
     "interest_rate": {
-      "total": 30.5,
+      "total": 16.0,
       "details": {
         "treasury_10y": {
           "value": 4.17,
           "score": 45.8
         },
         "treasury_30y": {
-          "value": 4.85,
-          "score": 41.3
+          "value": null,
+          "score": 0
         },
         "rate_decline": {
           "value": 1.21,
@@ -52,7 +52,7 @@
   ],
   "raw_data": {
     "treasury_10y": 4.17,
-    "treasury_30y": 4.85,
+    "treasury_30y": null,
     "vix": 14.9,
     "sp500": {
       "price": 6944.82,

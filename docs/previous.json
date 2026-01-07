@@ -1,5 +1,5 @@
 {
-  "total_score": 19.5,
+  "total_score": 13.7,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -8,15 +8,15 @@
   },
   "category_scores": {
     "interest_rate": {
-      "total": 30.5,
+      "total": 16.0,
       "details": {
         "treasury_10y": {
           "value": 4.17,
           "score": 45.8
         },
         "treasury_30y": {
-          "value": 4.85,
-          "score": 41.3
+          "value": null,
+          "score": 0
         },
         "rate_decline": {
           "value": 1.21,
@@ -50,7 +50,7 @@
   ],
   "raw_data": {
     "treasury_10y": 4.17,
-    "treasury_30y": 4.85,
+    "treasury_30y": null,
     "vix": 14.9,
     "sp500": {
       "price": 6944.82,
