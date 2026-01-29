@@ -1,5 +1,5 @@
 {
-  "total_score": 15.4,
+  "total_score": 21.4,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -8,18 +8,18 @@
   },
   "category_scores": {
     "interest_rate": {
-      "total": 14.6,
+      "total": 29.7,
       "details": {
         "treasury_10y": {
-          "value": null,
-          "score": 0
+          "value": 4.26,
+          "score": 43.5
         },
         "treasury_30y": {
-          "value": 4.83,
-          "score": 41.8
+          "value": 4.85,
+          "score": 41.3
         },
         "rate_decline": {
-          "value": 1.19,
+          "value": 1.91,
           "score": 0
         }
       }
@@ -32,9 +32,9 @@
           "score": 31.8
         },
         "sp500_deviation": {
-          "value": 8.81,
-          "price": 6978.03,
-          "ma_200": 6413.29,
+          "value": 8.53,
+          "price": 6969.01,
+          "ma_200": 6421.31,
           "score": 0
         }
       }
@@ -49,18 +49,18 @@
     "目立った変化なし"
   ],
   "raw_data": {
-    "treasury_10y": null,
-    "treasury_30y": 4.83,
+    "treasury_10y": 4.26,
+    "treasury_30y": 4.85,
     "vix": 16.35,
     "sp500": {
-      "price": 6978.03,
-      "ma_200": 6413.29,
-      "deviation_pct": 8.81
+      "price": 6969.01,
+      "ma_200": 6421.31,
+      "deviation_pct": 8.53
     },
     "treasury_10y_change": {
-      "current": 4.24,
-      "past": 4.19,
-      "change_pct": 1.19,
+      "current": 4.26,
+      "past": 4.18,
+      "change_pct": 1.91,
       "weeks": 2
     }
   }
