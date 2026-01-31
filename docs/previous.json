@@ -1,5 +1,5 @@
 {
-  "total_score": 22.3,
+  "total_score": 12.0,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -25,11 +25,11 @@
       }
     },
     "risk_off": {
-      "total": 17.2,
+      "total": 0.0,
       "details": {
         "vix": {
-          "value": 16.88,
-          "score": 34.4
+          "value": null,
+          "score": 0
         },
         "sp500_deviation": {
           "value": 7.93,
@@ -51,7 +51,7 @@
   "raw_data": {
     "treasury_10y": 4.24,
     "treasury_30y": 4.85,
-    "vix": 16.88,
+    "vix": null,
     "sp500": {
       "price": 6939.03,
       "ma_200": 6428.98,
