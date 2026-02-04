@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-02-03T22:23:16.653737",
-  "date": "2026-02-03",
-  "score": 21.1,
+  "last_updated": "2026-02-04T22:19:50.162467",
+  "date": "2026-02-04",
+  "score": 27.4,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -10,33 +10,33 @@
   },
   "category_scores": {
     "interest_rate": {
-      "total": 29.0,
+      "total": 38.4,
       "details": {
         "treasury_10y": {
-          "value": 4.29,
-          "score": 42.8
+          "value": 4.28,
+          "score": 43.0
         },
         "treasury_30y": {
           "value": 4.9,
           "score": 40.0
         },
         "rate_decline": {
-          "value": 1.18,
-          "score": 0
+          "value": -0.47,
+          "score": 31.3
         }
       }
     },
     "risk_off": {
-      "total": 15.8,
+      "total": 20.0,
       "details": {
         "vix": {
-          "value": 16.34,
-          "score": 31.7
+          "value": 18.0,
+          "score": 40.0
         },
         "sp500_deviation": {
-          "value": 7.33,
-          "price": 6917.81,
-          "ma_200": 6445.09,
+          "value": 6.66,
+          "price": 6882.72,
+          "ma_200": 6453.09,
           "score": 0
         }
       }
@@ -51,18 +51,18 @@
     "目立った変化なし"
   ],
   "raw_data": {
-    "treasury_10y": 4.29,
+    "treasury_10y": 4.28,
     "treasury_30y": 4.9,
-    "vix": 16.34,
+    "vix": 18.0,
     "sp500": {
-      "price": 6917.81,
-      "ma_200": 6445.09,
-      "deviation_pct": 7.33
+      "price": 6882.72,
+      "ma_200": 6453.09,
+      "deviation_pct": 6.66
     },
     "treasury_10y_change": {
-      "current": 4.29,
-      "past": 4.24,
-      "change_pct": 1.18,
+      "current": 4.28,
+      "past": 4.3,
+      "change_pct": -0.47,
       "weeks": 2
     }
   }
