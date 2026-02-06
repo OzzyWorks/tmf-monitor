@@ -1,66 +1,68 @@
 {
-  "total_score": 24.5,
+  "total_score": 47.9,
   "status": {
-    "level": "normal",
-    "label": "通常",
-    "emoji": "🟢",
-    "color": "#10b981"
+    "level": "precursor",
+    "label": "前兆",
+    "emoji": "⚠️",
+    "color": "#f59e0b"
   },
   "category_scores": {
     "interest_rate": {
-      "total": 28.9,
+      "total": 60.1,
       "details": {
         "treasury_10y": {
-          "value": 4.29,
-          "score": 42.8
+          "value": 4.21,
+          "score": 44.8
         },
         "treasury_30y": {
-          "value": 4.91,
-          "score": 39.8
+          "value": 4.85,
+          "score": 41.3
         },
         "rate_decline": {
-          "value": 0.7,
-          "score": 0
+          "value": -1.17,
+          "score": 100
         }
       }
     },
     "risk_off": {
-      "total": 21.6,
+      "total": 29.4,
       "details": {
         "vix": {
-          "value": 18.64,
-          "score": 43.2
+          "value": 21.77,
+          "score": 58.9
         },
         "sp500_deviation": {
-          "value": 5.22,
-          "price": 6798.4,
-          "ma_200": 6461.29,
+          "value": 7.15,
+          "price": 6932.3,
+          "ma_200": 6469.51,
           "score": 0
         }
       }
     }
   },
   "boost_conditions": {
-    "boost_applied": false,
-    "boost_multiplier": 1.0,
-    "conditions": []
+    "boost_applied": true,
+    "boost_multiplier": 1.15,
+    "conditions": [
+      "金利2週連続急低下"
+    ]
   },
   "signals": [
-    "目立った変化なし"
+    "金利急低下 (-1.17%)"
   ],
   "raw_data": {
-    "treasury_10y": 4.29,
-    "treasury_30y": 4.91,
-    "vix": 18.64,
+    "treasury_10y": 4.21,
+    "treasury_30y": 4.85,
+    "vix": 21.77,
     "sp500": {
-      "price": 6798.4,
-      "ma_200": 6461.29,
-      "deviation_pct": 5.22
+      "price": 6932.3,
+      "ma_200": 6469.51,
+      "deviation_pct": 7.15
     },
     "treasury_10y_change": {
-      "current": 4.29,
+      "current": 4.21,
       "past": 4.26,
-      "change_pct": 0.7,
+      "change_pct": -1.17,
       "weeks": 2
     }
   }
