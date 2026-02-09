@@ -1,68 +1,66 @@
 {
-  "total_score": 47.9,
+  "total_score": 27.4,
   "status": {
-    "level": "precursor",
-    "label": "前兆",
-    "emoji": "⚠️",
-    "color": "#f59e0b"
+    "level": "normal",
+    "label": "通常",
+    "emoji": "🟢",
+    "color": "#10b981"
   },
   "category_scores": {
     "interest_rate": {
-      "total": 60.1,
+      "total": 39.4,
       "details": {
         "treasury_10y": {
-          "value": 4.21,
-          "score": 44.8
+          "value": 4.22,
+          "score": 44.5
         },
         "treasury_30y": {
           "value": 4.85,
           "score": 41.3
         },
         "rate_decline": {
-          "value": -1.17,
-          "score": 100
+          "value": -0.47,
+          "score": 31.3
         }
       }
     },
     "risk_off": {
-      "total": 29.4,
+      "total": 19.4,
       "details": {
         "vix": {
-          "value": 21.77,
-          "score": 58.9
+          "value": 17.76,
+          "score": 38.8
         },
         "sp500_deviation": {
-          "value": 7.15,
-          "price": 6932.3,
-          "ma_200": 6469.51,
+          "value": 7.52,
+          "price": 6964.82,
+          "ma_200": 6477.46,
           "score": 0
         }
       }
     }
   },
   "boost_conditions": {
-    "boost_applied": true,
-    "boost_multiplier": 1.15,
-    "conditions": [
-      "金利2週連続急低下"
-    ]
+    "boost_applied": false,
+    "boost_multiplier": 1.0,
+    "conditions": []
   },
   "signals": [
-    "金利急低下 (-1.17%)"
+    "目立った変化なし"
   ],
   "raw_data": {
-    "treasury_10y": 4.21,
+    "treasury_10y": 4.22,
     "treasury_30y": 4.85,
-    "vix": 21.77,
+    "vix": 17.76,
     "sp500": {
-      "price": 6932.3,
-      "ma_200": 6469.51,
-      "deviation_pct": 7.15
+      "price": 6964.82,
+      "ma_200": 6477.46,
+      "deviation_pct": 7.52
     },
     "treasury_10y_change": {
-      "current": 4.21,
-      "past": 4.26,
-      "change_pct": -1.17,
+      "current": 4.22,
+      "past": 4.24,
+      "change_pct": -0.47,
       "weeks": 2
     }
   }
