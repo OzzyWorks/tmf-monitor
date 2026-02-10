@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-02-09T22:29:12.446693",
-  "date": "2026-02-09",
-  "score": 27.4,
+  "last_updated": "2026-02-10T22:33:36.594635",
+  "date": "2026-02-10",
+  "score": 23.0,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -10,7 +10,7 @@
   },
   "category_scores": {
     "interest_rate": {
-      "total": 39.4,
+      "total": 30.0,
       "details": {
         "treasury_10y": {
           "value": 4.22,
@@ -21,22 +21,22 @@
           "score": 41.3
         },
         "rate_decline": {
-          "value": -0.47,
-          "score": 31.3
+          "value": 0.0,
+          "score": 0
         }
       }
     },
     "risk_off": {
-      "total": 19.4,
+      "total": 18.4,
       "details": {
         "vix": {
-          "value": 17.76,
-          "score": 38.8
+          "value": 17.36,
+          "score": 36.8
         },
         "sp500_deviation": {
-          "value": 7.52,
-          "price": 6964.82,
-          "ma_200": 6477.46,
+          "value": 7.05,
+          "price": 6941.81,
+          "ma_200": 6484.74,
           "score": 0
         }
       }
@@ -53,16 +53,16 @@
   "raw_data": {
     "treasury_10y": 4.22,
     "treasury_30y": 4.85,
-    "vix": 17.76,
+    "vix": 17.36,
     "sp500": {
-      "price": 6964.82,
-      "ma_200": 6477.46,
-      "deviation_pct": 7.52
+      "price": 6941.81,
+      "ma_200": 6484.74,
+      "deviation_pct": 7.05
     },
     "treasury_10y_change": {
       "current": 4.22,
-      "past": 4.24,
-      "change_pct": -0.47,
+      "past": 4.22,
+      "change_pct": 0.0,
       "weeks": 2
     }
   }
