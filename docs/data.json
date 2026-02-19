@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-02-18T22:25:51.409972",
-  "date": "2026-02-18",
-  "score": 46.7,
+  "last_updated": "2026-02-19T22:24:36.893059",
+  "date": "2026-02-19",
+  "score": 45.3,
   "status": {
     "level": "precursor",
     "label": "前兆",
@@ -10,33 +10,33 @@
   },
   "category_scores": {
     "interest_rate": {
-      "total": 63.0,
+      "total": 62.4,
       "details": {
         "treasury_10y": {
-          "value": 4.05,
-          "score": 48.8
+          "value": 4.09,
+          "score": 47.8
         },
         "treasury_30y": {
-          "value": 4.68,
-          "score": 45.5
+          "value": 4.71,
+          "score": 44.8
         },
         "rate_decline": {
-          "value": -5.59,
+          "value": -4.44,
           "score": 100
         }
       }
     },
     "risk_off": {
-      "total": 25.7,
+      "total": 24.1,
       "details": {
         "vix": {
-          "value": 20.29,
-          "score": 51.4
+          "value": 19.62,
+          "score": 48.1
         },
         "sp500_deviation": {
-          "value": 5.58,
-          "price": 6881.31,
-          "ma_200": 6517.48,
+          "value": 5.19,
+          "price": 6861.89,
+          "ma_200": 6523.35,
           "score": 0
         }
       }
@@ -50,21 +50,21 @@
     ]
   },
   "signals": [
-    "金利急低下 (-5.59%)"
+    "金利急低下 (-4.44%)"
   ],
   "raw_data": {
-    "treasury_10y": 4.05,
-    "treasury_30y": 4.68,
-    "vix": 20.29,
+    "treasury_10y": 4.09,
+    "treasury_30y": 4.71,
+    "vix": 19.62,
     "sp500": {
-      "price": 6881.31,
-      "ma_200": 6517.48,
-      "deviation_pct": 5.58
+      "price": 6861.89,
+      "ma_200": 6523.35,
+      "deviation_pct": 5.19
     },
     "treasury_10y_change": {
-      "current": 4.05,
-      "past": 4.29,
-      "change_pct": -5.59,
+      "current": 4.09,
+      "past": 4.28,
+      "change_pct": -4.44,
       "weeks": 2
     }
   }
