@@ -1,70 +1,68 @@
 {
-  "last_updated": "2026-03-02T22:20:52.452380",
-  "date": "2026-03-02",
-  "score": 46.4,
+  "last_updated": "2026-03-03T22:21:28.222715",
+  "date": "2026-03-03",
+  "score": 30.3,
   "status": {
-    "level": "precursor",
-    "label": "前兆",
-    "emoji": "⚠️",
-    "color": "#f59e0b"
+    "level": "normal",
+    "label": "通常",
+    "emoji": "🟢",
+    "color": "#10b981"
   },
   "category_scores": {
     "interest_rate": {
-      "total": 64.0,
+      "total": 32.8,
       "details": {
         "treasury_10y": {
-          "value": 3.97,
-          "score": 50.7
+          "value": 4.05,
+          "score": 48.8
         },
         "treasury_30y": {
-          "value": 4.64,
-          "score": 46.5
+          "value": 4.7,
+          "score": 45.0
         },
         "rate_decline": {
-          "value": -2.93,
-          "score": 100
+          "value": 0.25,
+          "score": 0
         }
       }
     },
     "risk_off": {
-      "total": 24.6,
+      "total": 28.6,
       "details": {
         "vix": {
-          "value": 19.86,
-          "score": 49.3
+          "value": 21.44,
+          "score": 57.2
         },
         "sp500_deviation": {
-          "value": 4.82,
-          "price": 6881.62,
-          "ma_200": 6564.9,
+          "value": 3.76,
+          "price": 6816.63,
+          "ma_200": 6569.52,
           "score": 0
         }
       }
     }
   },
   "boost_conditions": {
-    "boost_applied": true,
-    "boost_multiplier": 1.15,
-    "conditions": [
-      "金利2週連続急低下"
-    ]
+    "boost_applied": false,
+    "boost_multiplier": 1.0,
+    "conditions": []
   },
   "signals": [
-    "金利急低下 (-2.93%)"
+    "目立った変化なし"
   ],
   "raw_data": {
-    "treasury_10y": 3.97,
-    "treasury_30y": 4.64,
-    "vix": 19.86,
+    "treasury_10y": 4.05,
+    "treasury_30y": 4.7,
+    "vix": 21.44,
     "sp500": {
-      "price": 6881.62,
-      "ma_200": 6564.9,
-      "deviation_pct": 4.82
+      "price": 6816.63,
+      "ma_200": 6569.52,
+      "deviation_pct": 3.76
     },
     "treasury_10y_change": {
-      "current": 3.97,
-      "past": 4.09,
-      "change_pct": -2.93,
+      "current": 4.05,
+      "past": 4.04,
+      "change_pct": 0.25,
       "weeks": 2
     }
   }
