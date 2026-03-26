@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-03-25T22:29:25.008010",
-  "date": "2026-03-25",
-  "score": 1.1,
+  "last_updated": "2026-03-26T22:22:00.389507",
+  "date": "2026-03-26",
+  "score": 4.7,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -27,17 +27,17 @@
       }
     },
     "risk_off": {
-      "total": 1.9,
+      "total": 7.8,
       "details": {
         "vix": {
           "value": null,
           "score": 0
         },
         "sp500_deviation": {
-          "value": -0.59,
-          "price": 6591.9,
-          "ma_200": 6630.83,
-          "score": 3.9
+          "value": -2.35,
+          "price": 6477.16,
+          "ma_200": 6633.18,
+          "score": 15.7
         }
       }
     }
@@ -55,9 +55,9 @@
     "treasury_30y": null,
     "vix": null,
     "sp500": {
-      "price": 6591.9,
-      "ma_200": 6630.83,
-      "deviation_pct": -0.59
+      "price": 6477.16,
+      "ma_200": 6633.18,
+      "deviation_pct": -2.35
     },
     "treasury_10y_change": null
   }
