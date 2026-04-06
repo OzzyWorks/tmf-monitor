@@ -1,5 +1,5 @@
 {
-  "total_score": 1.9,
+  "total_score": 1.1,
   "status": {
     "level": "normal",
     "label": "通常",
@@ -25,17 +25,17 @@
       }
     },
     "risk_off": {
-      "total": 3.1,
+      "total": 1.8,
       "details": {
         "vix": {
           "value": null,
           "score": 0
         },
         "sp500_deviation": {
-          "value": -0.93,
-          "price": 6582.69,
-          "ma_200": 6644.6,
-          "score": 6.2
+          "value": -0.54,
+          "price": 6611.83,
+          "ma_200": 6647.74,
+          "score": 3.6
         }
       }
     }
@@ -53,9 +53,9 @@
     "treasury_30y": null,
     "vix": null,
     "sp500": {
-      "price": 6582.69,
-      "ma_200": 6644.6,
-      "deviation_pct": -0.93
+      "price": 6611.83,
+      "ma_200": 6647.74,
+      "deviation_pct": -0.54
     },
     "treasury_10y_change": null
   }
