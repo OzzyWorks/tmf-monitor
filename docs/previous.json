@@ -32,9 +32,9 @@
           "score": 0
         },
         "sp500_deviation": {
-          "value": 9.56,
-          "price": 7398.93,
-          "ma_200": 6753.41,
+          "value": 9.68,
+          "price": 7412.84,
+          "ma_200": 6758.66,
           "score": 0
         }
       }
@@ -53,9 +53,9 @@
     "treasury_30y": null,
     "vix": null,
     "sp500": {
-      "price": 7398.93,
-      "ma_200": 6753.41,
-      "deviation_pct": 9.56
+      "price": 7412.84,
+      "ma_200": 6758.66,
+      "deviation_pct": 9.68
     },
     "treasury_10y_change": null
   }
