@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-26T22:53:24.394555",
-  "date": "2026-07-26",
+  "last_updated": "2026-07-27T22:54:51.939524",
+  "date": "2026-07-27",
   "score": 0.0,
   "status": {
     "level": "normal",
@@ -34,9 +34,9 @@
           "score": 0
         },
         "sp500_deviation": {
-          "value": 5.8,
-          "price": 7411.98,
-          "ma_200": 7005.73,
+          "value": 5.76,
+          "price": 7413.18,
+          "ma_200": 7009.23,
           "score": 0
         }
       }
@@ -55,9 +55,9 @@
     "treasury_30y": null,
     "vix": null,
     "sp500": {
-      "price": 7411.98,
-      "ma_200": 7005.73,
-      "deviation_pct": 5.8
+      "price": 7413.18,
+      "ma_200": 7009.23,
+      "deviation_pct": 5.76
     },
     "treasury_10y_change": null
   }
